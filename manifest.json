@@ -1,0 +1,23 @@
+{
+    "manifest_version":2,
+    "name":"trial",
+    "version":"1.0.0",
+    "description":"This is a sample server.",
+    "main":"index.js",
+    "icons":{
+        "16":"/logo.png",
+        "48":"/logo.png",
+        "128":"/logo.png"
+    },
+    "browser_action":{
+        "default_popup":"/index.html"
+    },
+    "content_scripts":[{
+        "js":["backend.js"],
+        "matches":["https://medium.com/*"],
+        "css":["style.css"],
+        "runAt": "document_start"
+
+    }],
+    "permissions":["activeTab","scripting"]
+}
